@@ -6,10 +6,10 @@ import "./Movie.css";
 function Movie({ title, poster, genres, synopsis }) {
 	return (
 		<div className="Movie">
-			<div className="Movie_columns">
+			<div className="Movie_column">
 				<MoviePoster poster={poster} alt={title} />
 			</div>
-			<div className="Movie_Columns">
+			<div className="Movie_Column">
 				<h1>{title}</h1>
 				<div className="Movie_Genres">
 					{genres.map((genre, index) => (
@@ -17,7 +17,7 @@ function Movie({ title, poster, genres, synopsis }) {
 					))}
 				</div>
 				<div className="Movie_Synopsis">
-					<LinesEllipsis text={synopsis} maxLine="3" ellipsis=" ..." trimRight basedOn="letters" />
+					<LinesEllipsis text={synopsis} maxLine="3" ellipsis="..." trimRight basedOn="letters" />
 				</div>
 			</div>
 		</div>
